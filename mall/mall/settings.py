@@ -183,8 +183,11 @@ LOGGING = {
         },
     }
 }
-
+4
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
 }
+
+###################告知django自定义的模型类
+AUTH_USER_MODEL = 'users.User'
