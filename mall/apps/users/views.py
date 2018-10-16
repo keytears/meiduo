@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import User
 
+
 # Create your views here.
 
 class RegisterUsernameCountAPIView(APIView):
@@ -12,7 +13,6 @@ class RegisterUsernameCountAPIView(APIView):
     """
 
     def get(self, request, username):
-
         # 通过模型查询，获取用户名个数
         count = User.objects.filter(username=username).count()
         # 组织返回数据
@@ -30,7 +30,6 @@ class RegisterPhoneCountAPIView(APIView):
     """
 
     def get(self, request, mobile):
-
         # 通过模型查询，获取手机号个数
         count = User.objects.filter(mobile=mobile).count()
         # 组织返回数据
